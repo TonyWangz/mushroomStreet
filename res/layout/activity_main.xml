@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_menu"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <RadioButton
+            android:id="@+id/favorite"
+            style="@style/tab_radio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_favorite"
+            android:gravity="center"
+            android:text="爱逛"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/category"
+            style="@style/tab_radio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_classification"
+            android:gravity="center"
+            android:text="分类"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/collocation"
+            style="@style/tab_radio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_collocation"
+            android:gravity="center"
+            android:text="搭配"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/message"
+            style="@style/tab_radio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_message"
+            android:gravity="center"
+            android:text="消息"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/mine"
+            style="@style/tab_radio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_mine"
+            android:gravity="center"
+            android:text="我的"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+</RelativeLayout>
