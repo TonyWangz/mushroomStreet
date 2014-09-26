@@ -262,7 +262,7 @@ public class FavoriteFragment extends BasicFragment implements
 		contextView = inflater.inflate(R.layout.act_pull_to_refresh_sample,
 				null);
 		super.onCreateView(inflater, container, savedInstanceState);
-		initActionBar();
+//		initActionBar();
 		return contextView;
 	}
 
@@ -327,12 +327,12 @@ public class FavoriteFragment extends BasicFragment implements
 		mImageFetcher.setLoadingImage(R.drawable.empty_photo);
 	}
 	
-	public void initActionBar(){
+	/*public void initActionBar(){
 		activity.leftIcon.setVisibility(View.GONE);
 		activity.title.setText("¥Ó≈‰");
 		activity.title.setVisibility(View.VISIBLE);
 		activity.rightIcon.setVisibility(View.VISIBLE);
-	}
+	}*/
 	
 	@Override
 	public void initListener() {

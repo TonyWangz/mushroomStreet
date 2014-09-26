@@ -30,16 +30,16 @@ public class MineFragment extends BasicFragment {
 			Bundle savedInstanceState) {
 		contextView = inflater.inflate(R.layout.fragment_mine, null, false);
 		super.onCreateView(inflater, container, savedInstanceState);
-		initActionBar();
+//		initActionBar();
 		
 		return contextView;
 	}
 
-	public void initActionBar() {
+	/*public void initActionBar() {
 		activity.leftIcon.setImageResource(R.drawable.title_icon_set);
 		activity.title.setVisibility(View.GONE);
 		activity.rightIcon.setVisibility(View.VISIBLE);
-	}
+	}*/
 
 	@Override
 	public void initView() {
@@ -64,7 +64,7 @@ public class MineFragment extends BasicFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		initActionBar();
+//		initActionBar();
 	}
 
 }

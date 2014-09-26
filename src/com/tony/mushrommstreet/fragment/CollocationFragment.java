@@ -42,17 +42,17 @@ public class CollocationFragment extends BasicFragment {
 		contextView = inflater.inflate(R.layout.fragment_collocation, null, false);
 		screenWidth = AppConfig.wm.getDefaultDisplay().getWidth();
 		super.onCreateView(inflater, container, savedInstanceState);
-		initActionBar();
+//		initActionBar();
 		
 		return contextView;
 	}
 	
-	public void initActionBar(){
+	/*public void initActionBar(){
 		activity.leftIcon.setVisibility(View.GONE);
 		activity.title.setText("¥Ó≈‰");
 		activity.title.setVisibility(View.VISIBLE);
 		activity.rightIcon.setVisibility(View.VISIBLE);
-	}
+	}*/
 	
 	@Override
 	public void initView() {
@@ -170,7 +170,7 @@ public class CollocationFragment extends BasicFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		initActionBar();
+//		initActionBar();
 	}
 
 }

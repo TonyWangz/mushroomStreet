@@ -23,6 +23,7 @@ import android.widget.GridView;
 import android.widget.ListView;
 
 import com.example.mushroomstreet.R;
+import com.tony.mushrommstreet.activity.MainActivity;
 import com.tony.mushrommstreet.adapter.CatChildAdapter;
 import com.tony.mushrommstreet.adapter.CatParentAdapter;
 import com.tony.mushrommstreet.bean.Cat;
@@ -45,6 +46,7 @@ public class SearchFragment extends BasicFragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		activity = (MainActivity) getActivity();
 	}
 
 	@Override
@@ -53,17 +55,17 @@ public class SearchFragment extends BasicFragment {
 		contextView = inflater.inflate(R.layout.fragment_category, null, false);
 		screenWidth = AppConfig.wm.getDefaultDisplay().getWidth();
 		super.onCreateView(inflater, container, savedInstanceState);
-		initActionBar();
+//		initActionBar();
 		
 		return contextView;
 	}
 
-	public void initActionBar() {
+	/*public void initActionBar() {
 		activity.leftIcon.setVisibility(View.GONE);
 		activity.rightIcon.setVisibility(View.VISIBLE);
 		activity.title.setVisibility(View.VISIBLE);
 		activity.title.setText("·ÖÀà");
-	}
+	}*/
 
 	@Override
 	public void initView() {
@@ -253,7 +255,7 @@ public class SearchFragment extends BasicFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		initActionBar();
+//		initActionBar();
 	}
 
 }

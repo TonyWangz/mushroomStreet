@@ -49,17 +49,17 @@ public class MessageFragment extends BasicFragment implements
 				false);
 		
 		super.onCreateView(inflater, container, savedInstanceState);
-		initActionBar();
+//		initActionBar();
 		resetData();
 		return contextView;
 	}
 	
-	public void initActionBar(){
+	/*public void initActionBar(){
 		activity.leftIcon.setVisibility(View.GONE);
 		activity.title.setText("最近联系人");
 		activity.title.setVisibility(View.VISIBLE);
 		activity.rightIcon.setVisibility(View.VISIBLE);
-	}
+	}*/
 	
 	@Override
 	public void initView() {
@@ -123,7 +123,7 @@ public class MessageFragment extends BasicFragment implements
 	@Override
 	public void onResume() {
 		super.onResume();
-		initActionBar();
+//		initActionBar();
 	}
 
 	@Override

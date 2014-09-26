@@ -62,7 +62,42 @@ public class MainActivity extends BaseActivity implements
 	public void initListener() {
 		radioGroup.setOnCheckedChangeListener(this);
 	}
-
+	
+	public void setChildActionBar(int what) {
+		switch (what) {
+		case 0:
+			leftIcon.setVisibility(View.GONE);
+			title.setVisibility(View.GONE);
+			rightIcon.setVisibility(View.VISIBLE);
+			break;
+		case 1:
+			leftIcon.setVisibility(View.GONE);
+			rightIcon.setVisibility(View.VISIBLE);
+			title.setVisibility(View.VISIBLE);
+			title.setText("分类");
+			break;
+		case 2:
+			leftIcon.setVisibility(View.GONE);
+			title.setText("搭配");
+			title.setVisibility(View.VISIBLE);
+			rightIcon.setVisibility(View.VISIBLE);
+			break;
+		case 3:
+			leftIcon.setVisibility(View.GONE);
+			title.setText("最近联系人");
+			title.setVisibility(View.VISIBLE);
+			rightIcon.setVisibility(View.VISIBLE);
+			break;
+		case 4:
+			leftIcon.setImageResource(R.drawable.title_icon_set);
+			title.setVisibility(View.GONE);
+			rightIcon.setVisibility(View.VISIBLE);
+			break;
+		default:
+			break;
+		}
+	}
+	
 	public void redirectTo(Fragment fragment) {
 		FragmentTransaction beginTransaction = getSupportFragmentManager()
 				.beginTransaction();
@@ -86,11 +121,14 @@ public class MainActivity extends BaseActivity implements
 	 * 9.14
 	 * switchContent会造成actionBar title异常，暂时换回redirecTo
 	 * 9.19
+	 * actionBarTitle 问题解决
+	 * 9.26
 	 * */
-/*	@Override
+	@Override
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
 		switch (checkedId) {
 		case R.id.favorite:
+			setChildActionBar(0);
 			switch (whichFragment) {
 			case 2:
 				switchContent(SearchFragment.getInstance(),
@@ -112,6 +150,7 @@ public class MainActivity extends BaseActivity implements
 			whichFragment = 1;
 			break;
 		case R.id.category:
+			setChildActionBar(1);
 			switch (whichFragment) {
 			case 1:
 				switchContent(FavoriteFragment.getInstance(),
@@ -133,6 +172,7 @@ public class MainActivity extends BaseActivity implements
 			whichFragment = 2;
 			break;
 		case R.id.collocation:
+			setChildActionBar(2);
 			switch (whichFragment) {
 			case 1:
 				switchContent(FavoriteFragment.getInstance(),
@@ -154,6 +194,7 @@ public class MainActivity extends BaseActivity implements
 			whichFragment = 3;
 			break;
 		case R.id.message:
+			setChildActionBar(3);
 			switch (whichFragment) {
 			case 1:
 				switchContent(FavoriteFragment.getInstance(),
@@ -175,6 +216,7 @@ public class MainActivity extends BaseActivity implements
 			whichFragment = 4;
 			break;
 		case R.id.mine:
+			setChildActionBar(4);
 			switch (whichFragment) {
 			case 1:
 				switchContent(FavoriteFragment.getInstance(),
@@ -197,8 +239,10 @@ public class MainActivity extends BaseActivity implements
 			break;
 		default:
 			break;
-		}*/
-	
+		}
+		
+		
+	/*
 	@Override
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
 		switch (checkedId) {
@@ -219,7 +263,7 @@ public class MainActivity extends BaseActivity implements
 			break;
 		default:
 			break;
-		}
+		}*/
 
 	}
 
